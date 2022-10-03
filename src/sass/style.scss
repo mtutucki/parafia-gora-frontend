@@ -14,7 +14,20 @@ html {
 body {
     font-family: 'Lato', sans-serif;
     color: #fff;
+    overflow-x: hidden;
 }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    font-size: 1.6rem;
+    &-brand{
+        font-size: 2rem;
+    }
+    z-index: 1;
+}
+
+
 
 .header {
     position: relative;

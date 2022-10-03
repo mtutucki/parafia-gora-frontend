@@ -1,0 +1,11 @@
+.navbar {
+    font-size: 1.6rem;
+    &-brand{
+        font-size: 2rem;
+    }
+
+    .collapse{
+        justify-content: flex-end;
+
+    }
+}
