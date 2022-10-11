@@ -21,7 +21,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
         <div class="container">
             <a class="navbar-brand" href="#">Parafia góra</a>
@@ -32,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Harmonogram</a>
+                        <a class="nav-link active" aria-current="page" href="#">Msze święte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ms-lg-5" href="#">Features</a>
@@ -54,8 +53,8 @@
             <div class="container">
                 <div class="header__text">
                     <div class="row vw-100 justify-content-center align-items-center text-center">
-                        <p class="header__text__name py-2 py-md-3">Kościół św. Barbaty w Górze</p>
-                        <p class="header__text__description py-2 py-md-3">Witaj na naszej stronie internetowej</p>
+                        <p class="header__text__name py-2 py-md-3">Kościół św. Barbary w Górze</p>
+                        <p class="header__text__description py-2 py-md-3 col-11 "></p>
                         <a href="#eucharist-hours"><button type="button"
                                 class="header__text__btn btn btn-outline-secondary w-auto px-5 py-2 my-2 my-md-3">Dowiedz
                                 się więcej</button></a>
@@ -67,17 +66,37 @@
 
     <main>
         <section class="schedule">
-            
+            <div class="container text-center">
+                <h2 class="schedule__heading py-5">Mszę świętę w godzinach</h2>
+
+                <div class="row">
+                    <div class="shedule__sunday row col-12 pb-3">
+                        <p class="shedule__sunday__hours"></p>
+                    </div>
+                    
+                    <div class="shedule__monday-wendesday row col-12 pb-3">
+                        <p class="shedule__monday-wendesday__hours"></p>
+                    </div>
+                    
+                    <div class="shedule__saturday row col-12 pb-3">
+                        <p class="shedule__saturday__hours"></p>
+                    </div>
+                    
+                    <div class="shedule__tuesday-thursday-friday row col-12 pb-5">
+                        <p class="shedule__tuesday-thursday-friday__hours"></p>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
-
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
     </script>
     <!-- my js -->
-    <script src="dist/js/main.min.js"></script>
+    <script type="module" src="src/js/main.js"></script>
 </body>
 
 </html>
