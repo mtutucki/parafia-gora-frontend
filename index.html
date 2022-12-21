@@ -13,11 +13,14 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/fa88202a41.js" crossorigin="anonymous"></script>
     <!-- MY CSS -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
     <link rel="stylesheet" media="screen and (min-width:576px)" href="./dist/css/small.min.css">
     <link rel="stylesheet" media="screen and (min-width:768px)" href="./dist/css/medium.min.css">
     <link rel="stylesheet" media="screen and (min-width:992px)" href="./dist/css/large.min.css">
+    <link href="dist/css/hamburgers.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,16 +31,25 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#schedule">Msze święte</a>
+                        <a class="nav-link" aria-current="page" href="#schedule">Msze święte</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-lg-5" href="#">Intencje</a>
+                        <a class="nav-link ms-lg-5" href="#intentions">Intencje</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-lg-5" href="#">Ogłoszenia</a>
+                        <a class="nav-link ms-lg-5" href="#announce">Ogłoszenia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-5" href="#history">Historia kościoła</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-5" href="#contact">Formularz kontaktowy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-5" href="#info">Informacje</a>
                     </li>
                 </ul>
             </div>
@@ -53,10 +65,10 @@
             <div class="container">
                 <div class="header__text">
                     <div class="row vw-100 justify-content-center align-items-center text-center">
-                        <p class="header__text__name py-2 py-md-3">Kościół św. Barbary w Górze</p>
+                        <p class="header__text__name py-2 py-md-3">Parafia św. Barbary w Górze</p>
                         <p class="header__text__description py-2 py-md-3 col-11 "></p>
-                        <a href="#eucharist-hours"><button type="button"
-                                class="header__text__btn btn btn-outline-secondary w-auto px-5 py-2 my-2 my-md-3">Dowiedz
+                        <a href="#schedule"><button type="button"
+                                class="header__text__btn btn btn-outline-primary w-auto px-5 py-2 my-2 my-md-3">Dowiedz
                                 się więcej</button></a>
                     </div>
                 </div>
@@ -67,21 +79,21 @@
     <main>
         <section class="schedule" id="schedule">
             <div class="container text-center">
-                <h2 class="schedule__heading py-5">Mszę świętę w godzinach</h2>
+                <h2 class="schedule__heading heading py-5">Mszę świętę w godzinach</h2>
 
                 <div class="row">
                     <div class="shedule__sunday row col-12 pb-3">
                         <p class="shedule__sunday__hours"></p>
                     </div>
-                    
+
                     <div class="shedule__monday-wendesday row col-12 pb-3">
                         <p class="shedule__monday-wendesday__hours"></p>
                     </div>
-                    
+
                     <div class="shedule__saturday row col-12 pb-3">
                         <p class="shedule__saturday__hours"></p>
                     </div>
-                    
+
                     <div class="shedule__tuesday-thursday-friday row col-12 pb-5">
                         <p class="shedule__tuesday-thursday-friday__hours"></p>
                     </div>
@@ -100,23 +112,110 @@
             </div>
         </section>
 
-        <section class="intentions">
+        <section id="intentions" class="intentions">
+            <h2 class="heading text-center py-5">Intencje</h2>
+            <p class="text-center py-0">Wybierz tydzień poniżej:</p>
+            <!-- bootsrap carousel -->
             <div class="container">
-                <div class="row">
-                    <div class="intentions__heading text-center"><p>Intencje</p></div>
-                    <div class="col12"></div>
-                    <div class="col12"></div>
-                    <div class="col12"></div>
-                    <div class="col12"></div>
+                <div class="intentions__accordion accordion " id="accordionExample">
                 </div>
             </div>
         </section>
 
+        <section class="between-second">
+            <div class="container-fluid px-0">
+                <div class="between-second__background"></div>
+                <div class="between-second__background__shadow"></div>
+            </div>
+            <div class="container">
+                <p class="between-second__text text-center col-10">Jakiś rychły cytat</p>
+            </div>
+        </section>
+
+        <section id="announce" class="announce">
+            <h2 class="text-center pt-5">Ogłoszenia</h2>
+            <p class="text-center py-0">Wybierz ogłoszenie poniżej</p>
+            <!-- bootsrap carousel -->
+            <div class="container">
+                <div class="announce__accordion accordion " id="accordionExample">
+                </div>
+            </div>
+        </section>
+
+        <section id="history" class="history">
+            <h2 class="text-center my-5">Historia kościoła</h2>
+
+            <div class="history__box">
+                <div class="history__box__shadow"></div>
+                <p class="history__box__text">
+                    Zbudowany został jako kaplica filialna zapewne w II połowie XVI. W latach 1580-1628 w rękach
+                    protestantów (kalwinistów). Do niewielkiej, zamkniętej wielobocznie w typie małopolskim kaplicy z
+                    oszalowanymi ścianami była niegdyś dostawiona wieża o konstrukcji słupowej, nakryta obitym blachą
+                    hełmem z latarnią. Rozbudowany w 1950 roku przez przesunięcie wieży i dodanie nawy. Całość do
+                    przeczytania <a class="history__box__text__link"
+                        href="https://pl.wikipedia.org/wiki/Ko%C5%9Bci%C3%B3%C5%82_%C5%9Bw._Barbary_w_G%C3%B3rze"
+                        target="_blank" rel="noopener noreferrer">tutaj</a>
+                </p>
+            </div>
+
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="text-center my-5">Formularz kontaktowy</h2>
+
+            <div class="container">
+                <form class="contact__form">
+                    <input class="contact__form__input" type="text" placeholder="Imię i nazwisko *">
+                    <input class="contact__form__input" type="text" placeholder="Nazwa firmy">
+                    <input class="contact__form__input" type="text" placeholder="Numer telefonu">
+                    <input class="contact__form__input" type="text" placeholder="Adres e-mail">
+                    <textarea class="contact__form__input contact__form__input--message"
+                        placeholder="Treść wiadomośći"></textarea>
+                    <div class="contact__form__input__agree">
+                        <input class="contact__form__input__agree__checkbox" type="checkbox">
+                        <div class="contact__form__input__agree__text">Wyrażam zgodę na przetwarzanie danych osobowych w
+                            celu kontaktu</div>
+                    </div>
+                    <button class="contact__form__input contact__form__input__sendBtn">Wyślij</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="info" class="info">
+            <h2 class="text-center my-5">Informacje</h2>
+            <div class="container">
+                <div class="info__adress">Adres:</div>
+                    <p class="info__adress__top"></p>
+                    <p class="info__adress__barbara">Parafia św. Barbary w Górze</p>
+                    <p class="info__adress__jan mt-3">Kościół Rzymskokatolicki pw. św. Jana Pawła II</p>
+                    <p class="info__adress__barbara__text">Kościelna 32, 43-227 Góra</p>
+                    <p class="info__adress__jan__text">Topolowa 37, 43-227 Góra</p>
+                <div class="info__contact mt-5"></div>
+                    <p class="info__contact__top">Dane kontaktowe:</p>
+                    <p class="info__contact__tel">48 32 211 71 71</p>
+                    <p class="info__contact__mail">gora@archidiecezjakatowicka.pl</p>
+                <div class="info__account mt-5"></div>
+                    <p class="info__account__top">Konto bankowe:</p>
+                    <p class="info__acount__bank">Bank Pekao SA</p>
+                    <p class="info__account__number">PL00 0000 0000 0000 0000 0000 0000. </p>
+                <div class="info__socials">
+                    <p class="info__socials__top mt-5">Social media:</p>
+                    <i class="fa-brands fa-facebook"></i><a href="">Sprawdź informację na facebooku</a>
+                </div>
+            </div>
 
 
-
-
+        </section>
     </main>
+
+    <footer class="footer my-5">
+        <div class="container">
+            <p class="footer__text">
+                <span class="footer__text__data">data</span> Parafia św. Barbary w Górze 
+                <p class="footer__author">Strona stworzona przez Marcin Tutucki</p>
+            </p>
+        </div>
+    </footer>
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
@@ -124,6 +223,7 @@
     </script>
     <!-- my js -->
     <script type="module" src="src/js/main.js"></script>
+
 </body>
 
 </html>
