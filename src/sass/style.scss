@@ -11,7 +11,7 @@
 html {
     font-size: 62.5%; // 10px
     scroll-behavior: smooth;
-    scroll-padding-top: 10vh;
+    scroll-padding-top: 9vh;
 }
 
 body {
@@ -26,6 +26,7 @@ body {
     min-height: 8vh;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+    z-index: 5;
 
     &-brand {
         position: relative;
@@ -41,7 +42,6 @@ body {
         height: 2px;
         background-color: $second-color;
         transform: scaleX(0);
-        transform-origin: left;
         transition: .3s;
     }
 
@@ -230,68 +230,102 @@ main {
         }
     }
 
-    .intentions {
+    .intentions, .announce {
         color: black;
         font-size: $text-fz-mb;
         max-height: 80vh;
         overflow: scroll;
 
-        .accordion-button{
+
+
+        .accordion-item{
+            border: none;
+        }
+
+        .accordion-button, .accordion-item:first-of-type .accordion-button {
             background-color: wheat;
             font-size: $text-fz-mb;
             border: 2px solid black;
-            padding: 1rem;
             margin: 1rem 0;
             border-radius: 8px;
 
             &--inside{
                 margin-bottom: 0;
-
+                border-bottom-left-radius:0 ;
+                border-bottom-right-radius:0 ;
                 &__text{
                     background-color: rgb(241, 222, 185);
                     border: 1px solid black;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
                 }
-
             }
-
-
-
-
-
         }
 
+        .accordion-button:not(.collapsed){
+            color: brown;
+        }
 
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23964B00'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+          }
 
-
-
-
-
-
-
-
+        
     }
 
     .announce {
-        color: black;
-        max-height: 50vh;
-        overflow: scroll;
-        font-size: 2rem;
-
-        .accordion{
-            font-size: 2rem;
+        &__title, &__date{
+            text-align: center;
+            font-weight: bold;
         }
 
+        &__title{
+            font-size: $medium-fz-mb;
+        }
+
+        &__number{
+            padding-right: 5px;
+            font-weight: bold;
+        }
+
+        .accordion-button{
+            overflow: hidden;
+        }
+
+        .accordion-body{
+            margin-top: -10px;
+            border: 1px solid black;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .accordion-item{
+            background-color: wheat;
+        }
+
+        &__content{
+            padding: 1rem .4rem;
+            background-color: wheat;
+        }
     }
 
     .history {
         color: black;
+
+        .heading{
+            color: white;
+        }
+
+        .heading::after{
+            background-color: white;
+        }
 
         &__box {
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            height: 50vh;
+            min-height: 50vh;
             background-image: url('../img/history/KosciolDrewniany1-small.jpg');
             background-position: center;
             background-size: cover;
@@ -302,13 +336,16 @@ main {
                 left: 0;
                 height: 100%;
                 width: 100%;
-                background-color: rgba(0, 0, 0, .5);
+                background-color: rgba(0, 0, 0, .6);
+            }
+
+            .container{
+                z-index: 1;
             }
 
             &__text {
-                padding: 2rem;
                 color: white;
-                font-size: 1.6rem;
+                font-size: $text-fz-mb;
                 z-index: 1;
                 letter-spacing: 1px;
 
@@ -323,6 +360,7 @@ main {
     .contact {
         width: 100%;
         color: black;
+        font-size: $text-fz-mb;
 
         &__form {
             display: flex;
@@ -331,10 +369,9 @@ main {
 
             &__input {
                 width: 100%;
-                height: 50px;
+                height: 40px;
                 padding: 1rem 2rem;
                 margin-bottom: 2rem;
-                font-size: 1.6rem;
                 border-radius: 4px;
 
                 &--message {
@@ -346,10 +383,11 @@ main {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    font-size: 1.6rem;
+                    cursor: pointer;
 
                     &__checkbox {
                         padding: 1rem;
+                        cursor: pointer;
                     }
 
                     &__text {
@@ -359,6 +397,7 @@ main {
 
                 &__sendBtn {
                     margin-top: 2rem;
+                    height: auto;
                 }
             }
         }
