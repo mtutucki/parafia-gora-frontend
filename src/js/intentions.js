@@ -13,10 +13,7 @@ const getDay = (day) => {
     dateStyle: 'full',
     timeStyle: 'medium',
   }).slice(0, -9)
-
 }
-
-
 const intentionAccordion = () => {
   let accordionCounter = 0
   let accordionBodyCounter = 100
@@ -143,7 +140,6 @@ const intentionAccordion = () => {
       accordionCounter++
     }))
 }
-
 
 const getIntentions = async () => {
   await intentionAccordion()

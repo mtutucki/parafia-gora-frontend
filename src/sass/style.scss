@@ -49,8 +49,9 @@ body {
         transform: scaleX(1);
     }
 
+    // burger-btn
     .navbar-toggler {
-        padding: .6rem;
+        padding: .4rem;
         font-size: 2rem;
     }
 
@@ -165,7 +166,7 @@ main {
         font-size: $medium-fz-mb;
     }
 
-    .heading::after{
+    .heading::after {
         content: '';
         position: absolute;
         bottom: 20%;
@@ -183,7 +184,10 @@ main {
         font-size: $text-fz-mb;
         color: black;
 
-        .shedule__sunday__hours,.shedule__monday-wendesday__hours, .shedule__saturday__hours, .shedule__tuesday-thursday-friday__hours{
+        .shedule__sunday__hours,
+        .shedule__monday-wendesday__hours,
+        .shedule__saturday__hours,
+        .shedule__tuesday-thursday-friday__hours {
             font-weight: bold;
         }
 
@@ -195,7 +199,8 @@ main {
 
         &__background {
             position: relative;
-            min-height: 25vh;
+            padding: 2rem 0;
+            min-height: 40vh;
             background-image: url('../img/between/between.jpg');
             background-position: left;
             background-size: cover;
@@ -230,7 +235,8 @@ main {
         }
     }
 
-    .intentions, .announce {
+    .intentions,
+    .announce {
         color: black;
         font-size: $text-fz-mb;
         max-height: 80vh;
@@ -238,22 +244,24 @@ main {
 
 
 
-        .accordion-item{
+        .accordion-item {
             border: none;
         }
 
-        .accordion-button, .accordion-item:first-of-type .accordion-button {
+        .accordion-button,
+        .accordion-item:first-of-type .accordion-button {
             background-color: wheat;
             font-size: $text-fz-mb;
             border: 2px solid black;
             margin: 1rem 0;
             border-radius: 8px;
 
-            &--inside{
+            &--inside {
                 margin-bottom: 0;
-                border-bottom-left-radius:0 ;
-                border-bottom-right-radius:0 ;
-                &__text{
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+
+                &__text {
                     background-color: rgb(241, 222, 185);
                     border: 1px solid black;
                     border-top-left-radius: 0;
@@ -262,48 +270,50 @@ main {
             }
         }
 
-        .accordion-button:not(.collapsed){
+        .accordion-button:not(.collapsed) {
             color: brown;
         }
 
         .accordion-button:not(.collapsed)::after {
             background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23964B00'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-          }
+        }
 
-        
+
     }
 
     .announce {
-        &__title, &__date{
+
+        &__title,
+        &__date {
             text-align: center;
             font-weight: bold;
         }
 
-        &__title{
+        &__title {
             font-size: $medium-fz-mb;
         }
 
-        &__number{
+        &__number {
             padding-right: 5px;
             font-weight: bold;
         }
 
-        .accordion-button{
+        .accordion-button {
             overflow: hidden;
         }
 
-        .accordion-body{
+        .accordion-body {
             margin-top: -10px;
             border: 1px solid black;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
 
-        .accordion-item{
+        .accordion-item {
             background-color: wheat;
         }
 
-        &__content{
+        &__content {
             padding: 1rem .4rem;
             background-color: wheat;
         }
@@ -312,11 +322,11 @@ main {
     .history {
         color: black;
 
-        .heading{
+        .heading {
             color: white;
         }
 
-        .heading::after{
+        .heading::after {
             background-color: white;
         }
 
@@ -339,7 +349,7 @@ main {
                 background-color: rgba(0, 0, 0, .6);
             }
 
-            .container{
+            .container {
                 z-index: 1;
             }
 
@@ -405,11 +415,40 @@ main {
 
     .info {
         color: black;
-        font-size: 1.6rem;
+        font-size: $text-fz-mb;
+        text-align: center;
+
+        a {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        &--top {
+            font-weight: bold;
+        }
     }
 }
 
 .footer {
-    font-size: 1.6rem;
-    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    // min-height: 50vh;
+    font-size: $text-fz-mb;
+    background-color: rgb(116, 110, 110);
+    text-align: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-style: italic;
+        font-weight: normal;
+    }
+
 }

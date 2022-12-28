@@ -191,25 +191,25 @@
         </section>
 
         <section id="info" class="info">
-            <h2 class="text-center my-5">Informacje</h2>
+            <h2 class="heading text-center py-5">Informacje</h2>
             <div class="container">
-                <div class="info__adress">Adres:</div>
+                <div class="info__adress info--top">Adres:</div>
                 <p class="info__adress__top"></p>
                 <p class="info__adress__barbara">Parafia św. Barbary w Górze</p>
                 <p class="info__adress__jan mt-3">Kościół Rzymskokatolicki pw. św. Jana Pawła II</p>
                 <p class="info__adress__barbara__text">Kościelna 32, 43-227 Góra</p>
                 <p class="info__adress__jan__text">Topolowa 37, 43-227 Góra</p>
                 <div class="info__contact mt-5"></div>
-                <p class="info__contact__top">Dane kontaktowe:</p>
+                <p class="info__contact__top info--top">Dane kontaktowe:</p>
                 <p class="info__contact__tel">48 32 211 71 71</p>
                 <p class="info__contact__mail">gora@archidiecezjakatowicka.pl</p>
                 <div class="info__account mt-5"></div>
-                <p class="info__account__top">Konto bankowe:</p>
+                <p class="info__account__top info--top">Konto bankowe:</p>
                 <p class="info__acount__bank">Bank Pekao SA</p>
                 <p class="info__account__number">PL00 0000 0000 0000 0000 0000 0000. </p>
-                <div class="info__socials">
+                <div class="info__socials info--top">
                     <p class="info__socials__top mt-5">Social media:</p>
-                    <i class="fa-brands fa-facebook"></i><a href="">Sprawdź informację na facebooku</a>
+                    <a href=""><i class="pe-3 fa-brands fa-facebook"></i> Kliknij, aby zobaczyć nas na facebooku</a>
                 </div>
             </div>
 
@@ -217,16 +217,26 @@
         </section>
     </main>
 
-    <footer class="footer my-5">
+    <footer class="footer mt-5">
         <div class="container">
             <p class="footer__text">
-                <span class="footer__text__data">data</span> Parafia św. Barbary w Górze
-                <p class="footer__author">Strona stworzona przez Marcin Tutucki</p>
+                <p>Copyright &#169 <span class="footer__text__data">data</span> Parafia św. Barbary w Górze</p>
+                <p>Użyto:
+                    <a class="footer__text__link" href="https://strapi.io/" target="_blank" >Strapi CMS</a>
+                    <span>, </span>
+                    <a class="footer__text__link" href="https://getbootstrap.com/" target="_blank" >Bootstrap</a>
+                    <span>, </span>
+                    <a class="footer__text__link" href="https://www.emailjs.com/" target="_blank" >EmailJS</a>
+                    <span>, </span>
+                    <a class="footer__text__link" href="https://biblianacodzien.pl/" target="_blank" >Biblia na codzień API</a>
+
+                </p>
+                <p class="footer__author">Autor: Marcin Tutucki</p>
             </p>
         </div>
     </footer>
 
-    <!-- sens emailjs -->
+    <!-- send emailjs -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">

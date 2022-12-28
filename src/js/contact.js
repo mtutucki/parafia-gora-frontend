@@ -6,7 +6,8 @@ const message = document.body.querySelector('.contact__form__input--message')
 const agreeCheckbox = document.body.querySelector('.contact__form__input__agree')
 const agree = document.body.querySelector('.contact__form__input__agree__checkbox')
 const sendBtn = document.body.querySelector('.contact__form__input__sendBtn')
-
+// footer
+const footerYear = document.body.querySelector('.footer__text__data')
 
 const colorInputs = () => {
     if (name.value === '') {
@@ -78,10 +79,16 @@ const sendMail = () => {
     })
 }
 
-const contact = () => {
-    checkboxEventListener()
-    sendMail()
-    console.log(name.value)
+const getActualData  = () => {
+    let year = new Date()
+    let actualYear = year.getFullYear()
+    footerYear.innerHTML = actualYear
+}
+
+const contact = async ()  => {
+    await checkboxEventListener()
+    await sendMail()
+    await getActualData()
 }
 
 export default contact
