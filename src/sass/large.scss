@@ -1,11 +1,168 @@
+@import 'variables.scss';
+
+// nav links to right
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
 .navbar {
-    font-size: 1.6rem;
-    &-brand{
-        font-size: 2rem;
+    .navbar-brand {
+        font-size: $medium-fz-lg;
+    }
+    z-index: 5;
+}
+
+.header {
+    position: relative;
+
+    &__text {
+        font-size: $medium-fz-lg;
+
+        &__name {
+            font-size: $big-fz-lg;
+        }
+
+        &__description {
+            font-size: $medium-fz-lg;
+        }
+
+        &__btn {
+            font-size: $text-fz-lg;
+        }
+    }
+}
+
+main {
+
+    .heading {
+        font-size: $medium-fz-lg;
+        margin-bottom: 2rem;
     }
 
-    .collapse{
-        justify-content: flex-end;
+    .heading::after {
+        bottom: 20%;
+        left: 37.5%;
+        width: 25%;
+    }
+
+    // fist section with sacraments schedule
+    .schedule {
+        font-size: $text-fz-lg;
+    }
+
+    .between,
+    .between-second {
+        position: relative;
+
+        &__background {
+            
+            min-height: 30vh;
+        }
+
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2rem 0rem;
+            font-size: $text-fz-lg;
+            color: white;
+            z-index: 2;
+        }
+    }
+
+    .intentions,
+    .announce {
+        font-size: $text-fz-lg;
+
+        .accordion-button,
+        .accordion-item:first-of-type .accordion-button {
+            font-size: $text-fz-lg;
+        }
 
     }
+
+    .announce {
+        &__title {
+            font-size: $medium-fz-lg;
+        }
+    }
+
+    .history {
+        position: relative;
+        .heading {
+            position: absolute;
+            top: 0;
+            z-index: 5;
+        }
+
+        .heading::after {
+            left: -40%;
+            width: 180%;
+        }
+
+        &__box {
+            min-height: 50vh;
+
+            &__text {
+                font-size: $text-fz-lg;
+            }
+        }
+    }
+
+    .contact {
+        font-size: $text-fz-lg;
+
+        &__form {
+            align-items: center;
+        }
+    }
+
+
+    .info {
+        color: black;
+        font-size: $text-fz-lg;
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            height: 100%;
+        }
+
+        &__wrap{
+            margin-top: -5rem;
+            padding-right: 2rem;
+        }
+
+        &__wrap--last{
+            padding-right: 0;
+        }
+
+        p{
+            padding-bottom: 1rem;
+        }
+
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    // min-height: 50vh;
+    font-size: $text-fz-mb;
+    background-color: rgb(116, 110, 110);
+    text-align: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-style: italic;
+        font-weight: normal;
+    }
+
 }

@@ -2,9 +2,9 @@
 
 
 .navbar {
-    &-brand {
+    .navbar-brand {
         position: relative;
-        font-size: $brand-font-size-mid;
+        font-size: $medium-fz-mid;
     }
 
     // burger-btn
