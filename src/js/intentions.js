@@ -18,7 +18,7 @@ const intentionAccordion = () => {
   let accordionCounter = 0
   let accordionBodyCounter = 100
   let day = 9;
-  fetch($URL)
+  fetch($URL, {cache: "no-cache"})
     .then(res => res.json())
     .then(data => data.data.forEach(intention => {
       accordion.innerHTML += `<div class="accordion-item">

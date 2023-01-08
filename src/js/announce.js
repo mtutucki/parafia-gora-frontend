@@ -4,7 +4,7 @@ const $URL = 'https://backend-parafia.onrender.com/api/announces'
 const anounceAccordion = () => {
   let accordionCounter = -1
 
-  fetch($URL)
+  fetch($URL, { cache: "no-cache" })
   .then(res => res.json())
   .then(data => data.data.forEach(announce => {
       accordion.innerHTML += `

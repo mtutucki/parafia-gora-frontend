@@ -158,24 +158,3 @@ main {
 
     }
 }
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
-    // min-height: 50vh;
-    font-size: $text-fz-mb;
-    background-color: rgb(116, 110, 110);
-    text-align: center;
-
-    a {
-        color: white;
-        text-decoration: none;
-        cursor: pointer;
-        font-style: italic;
-        font-weight: normal;
-    }
-
-}

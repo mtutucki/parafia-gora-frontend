@@ -6,7 +6,6 @@ const message = document.body.querySelector('.contact__form__input--message')
 const agreeCheckbox = document.body.querySelector('.contact__form__input__agree')
 const agree = document.body.querySelector('.contact__form__input__agree__checkbox')
 const sendBtn = document.body.querySelector('.contact__form__input__sendBtn')
-// footer
 const footerYear = document.body.querySelector('.footer__text__data')
 
 const colorInputs = () => {
@@ -52,7 +51,6 @@ const checkboxEventListener = () => {
 }
 
 const sendMail = () => {
-
     sendBtn.addEventListener('click', function send() {
         if (name.value !== '' && phone.value !== '' && mail.value !== '' && message.value !== '' && agree.checked == true) {
             var templateParams = {
