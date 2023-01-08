@@ -5,9 +5,17 @@
     justify-content: flex-end;
 }
 .navbar {
+    .hamburger{
+        display: none;
+    }
+
     .navbar-brand {
         font-size: $medium-fz-lg;
     }
+    .nav-link {
+        font-size: $text-fz-lg;
+    }
+
     z-index: 5;
 }
 
@@ -84,6 +92,11 @@ main {
     .announce {
         &__title {
             font-size: $medium-fz-lg;
+        }
+
+        &__title::after {
+            left: 37.5%;
+            width: 25%;
         }
     }
 

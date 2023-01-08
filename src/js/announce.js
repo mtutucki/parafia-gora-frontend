@@ -1,5 +1,5 @@
 const accordion = document.body.querySelector('.announce__accordion')
-const $URL = 'http://localhost:1337/api/announces'
+const $URL = 'https://backend-parafia.onrender.com/api/announces'
 
 const anounceAccordion = () => {
   let accordionCounter = -1

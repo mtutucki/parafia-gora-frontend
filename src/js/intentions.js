@@ -1,12 +1,12 @@
 const accordion = document.body.querySelector('.intentions__accordion')
-const $URL = 'http://localhost:1337/api/intentions'
+const $URL = 'https://backend-parafia.onrender.com/api/intentions'
 
 
 
 const getDay = (day) => {
   const intentionDay = new Date()
-  intentionDay.setYear(2022)
-  intentionDay.setUTCMonth(10)
+  intentionDay.setYear(2023)
+  intentionDay.setUTCMonth(0)
   intentionDay.setDate(day)
 
   return intentionDay.toLocaleString('pl', {
@@ -17,7 +17,7 @@ const getDay = (day) => {
 const intentionAccordion = () => {
   let accordionCounter = 0
   let accordionBodyCounter = 100
-  let day = 28;
+  let day = 9;
   fetch($URL)
     .then(res => res.json())
     .then(data => data.data.forEach(intention => {
@@ -53,7 +53,7 @@ const intentionAccordion = () => {
             </button>
           </h2>
     <div id="collapse${accordionBodyCounter}" class="accordion-collapse collapse" aria-labelledby="heading${accordionBodyCounter}" data-bs-parent="#accordion${accordionBodyCounter++}">
-    <div class="accordion-body">
+    <div class="accordion-body accordion-button--inside__text">
       <p>${intention.attributes.intentionWtorek}</p>
     </div>
     </div>
@@ -68,7 +68,7 @@ const intentionAccordion = () => {
         </button>
       </h2>
 <div id="collapse${accordionBodyCounter}" class="accordion-collapse collapse" aria-labelledby="heading${accordionBodyCounter}" data-bs-parent="#accordion${accordionBodyCounter++}">
-<div class="accordion-body">
+<div class="accordion-body accordion-button--inside__text"">
   <p>${intention.attributes.intentionSroda}</p>
 </div>
 </div>
@@ -83,7 +83,7 @@ const intentionAccordion = () => {
     </button>
   </h2>
 <div id="collapse${accordionBodyCounter}" class="accordion-collapse collapse" aria-labelledby="heading${accordionBodyCounter}" data-bs-parent="#accordion${accordionBodyCounter++}">
-<div class="accordion-body">
+<div class="accordion-body accordion-button--inside__text"">
 <p>${intention.attributes.intentionCzwartek}</p>
 </div>
 </div>
@@ -98,7 +98,7 @@ const intentionAccordion = () => {
     </button>
   </h2>
 <div id="collapse${accordionBodyCounter}" class="accordion-collapse collapse" aria-labelledby="heading${accordionBodyCounter}" data-bs-parent="#accordion${accordionBodyCounter++}">
-<div class="accordion-body">
+<div class="accordion-body accordion-button--inside__text"">
 <p>${intention.attributes.intentionPiatek}</p>
 </div>
 </div>
@@ -113,7 +113,7 @@ const intentionAccordion = () => {
     </button>
   </h2>
 <div id="collapse${accordionBodyCounter}" class="accordion-collapse collapse" aria-labelledby="heading${accordionBodyCounter}" data-bs-parent="#accordion${accordionBodyCounter++}">
-<div class="accordion-body">
+<div class="accordion-body accordion-button--inside__text"">
 <p>${intention.attributes.intentionSobota}</p>
 </div>
 </div>
@@ -128,7 +128,7 @@ const intentionAccordion = () => {
     </button>
   </h2>
 <div id="collapse${accordionBodyCounter}" class="accordion-collapse collapse" aria-labelledby="heading${accordionBodyCounter}" data-bs-parent="#accordion${accordionBodyCounter++}">
-<div class="accordion-body">
+<div class="accordion-body accordion-button--inside__text"">
 <p>${intention.attributes.intentionNiedziela}</p>
 </div>
 </div>

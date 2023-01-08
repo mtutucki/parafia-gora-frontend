@@ -15,21 +15,24 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/fa88202a41.js" crossorigin="anonymous"></script>
+    <!-- hamburgers  -->
+    <link href="dist/css/hamburgers.min.css" rel="stylesheet">
     <!-- MY CSS -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
     <link rel="stylesheet" media="screen and (min-width:576px)" href="./dist/css/small.min.css">
     <link rel="stylesheet" media="screen and (min-width:768px)" href="./dist/css/medium.min.css">
     <link rel="stylesheet" media="screen and (min-width:992px)" href="./dist/css/large.min.css">
-    <link href="dist/css/hamburgers.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#header">Parafia góra</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="hamburger hamburger--elastic" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
             </button>
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav">
@@ -37,19 +40,19 @@
                         <a class="nav-link" aria-current="page" href="#schedule">Msze święte</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-lg-4" href="#intentions">Intencje</a>
+                        <a class="nav-link ms-lg-5" href="#intentions">Intencje</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-lg-4" href="#announce">Ogłoszenia</a>
+                        <a class="nav-link ms-lg-5" href="#announce">Ogłoszenia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-lg-4" href="#history">Historia kościoła</a>
+                        <a class="nav-link ms-lg-5" href="#history">Historia kościoła</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-lg-4" href="#contact">Kontakt</a>
+                        <a class="nav-link ms-lg-5" href="#contact">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ms-lg-4" href="#info">Informacje</a>
+                        <a class="nav-link ms-lg-5" href="#info">Informacje</a>
                     </li>
                 </ul>
             </div>
@@ -68,7 +71,7 @@
                         <h1 class="header__text__name py-2 py-md-3">Parafia św. Barbary w Górze</h1>
                         <p class="header__text__description py-2 py-md-3 col-11 "></p>
                         <a href="#schedule"><button type="button"
-                                class="header__text__btn btn btn-outline-primary w-auto px-5 py-2 my-2 my-md-3">Dowiedz
+                                class="header__text__btn btn btn-outline-primary w-auto my-2 my-md-3">Dowiedz
                                 się więcej</button></a>
                     </div>
                 </div>
@@ -132,7 +135,7 @@
             </div>
         </section>
 
-        <section id="announce" class="announce">
+        <section id="announce" class="announce pb-5">
             <h2 class="heading text-center py-5">Ogłoszenia</h2>
             <p class="text-center py-0">Wybierz ogłoszenie poniżej</p>
             <!-- bootsrap carousel -->
@@ -142,12 +145,12 @@
             </div>
         </section>
 
-        <section id="history" class="history pt-5">
+        <section id="history" class="history">
             <div class="history__box">
-                <h2 class="heading text-center py-5">Historia kościoła</h2>
 
                 <div class="history__box__shadow"></div>
                 <div class="container">
+                    <h2 class="heading text-center py-5">Historia kościoła</h2>
                     <p class="history__box__text pb-5">
                         Zbudowany został jako kaplica filialna zapewne w II połowie XVI. W latach 1580-1628 w rękach
                         protestantów (kalwinistów). Do niewielkiej, zamkniętej wielobocznie w typie małopolskim kaplicy

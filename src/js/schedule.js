@@ -3,7 +3,7 @@ const mondayWendesday = document.body.querySelector('.shedule__monday-wendesday_
 const saturday = document.body.querySelector('.shedule__saturday__hours')
 const tuesdayThursdayFriday = document.body.querySelector('.shedule__tuesday-thursday-friday__hours')
 
-const $scheduleURL = 'http://localhost:1337/api/eucharist-hours'
+const $scheduleURL = 'https://backend-parafia.onrender.com/api/eucharist-hours'
 
 const setSundayText = () => {
     fetch($scheduleURL)
