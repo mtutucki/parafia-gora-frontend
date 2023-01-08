@@ -42,21 +42,21 @@ function sassCompiler(done) {
     .pipe(sourcemaps.write())
     .pipe(dest(paths.sassDest));
   done();
-};
+}
 
 function javaScript(done) {
   src(paths.js)
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(sourcemaps.write())
-    .pipe(dest(paths.jsDest));
-  done();
+  .pipe(sourcemaps.init())
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
+  .pipe(uglify())
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(sourcemaps.write())
+  .pipe(dest(paths.jsDest));
+done();
 }
 
 function convertImages(done) {

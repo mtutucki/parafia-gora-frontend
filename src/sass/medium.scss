@@ -19,6 +19,11 @@
 
 .header {
 
+    &__background {
+        background-image: url('../img/header/Kosciol3-medium.jpg');
+
+    }
+
     &__text {
         font-size: $medium-fz-mid;
 
@@ -56,11 +61,18 @@ main {
     .between-second {
 
         &__background {
+            background-image: url('../img/between/between-medium.jpg');
             min-height: 25vh;
         }
 
         &__text {
             font-size: $text-fz-mid;
+        }
+    }
+
+    .between-second {
+        &__background {
+            background-image: url('../img/between-second/between-second-medium.jpg');
         }
     }
 
@@ -83,6 +95,8 @@ main {
 
     .history {
         &__box {
+            background-image: url('../img/history/KosciolDrewniany1-medium.jpg');
+
             &__text {
                 font-size: $text-fz-mid;
             }

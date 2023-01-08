@@ -61,7 +61,7 @@ const sendMail = () => {
                 message: message.value,
             };
     
-            emailjs.send('service_s2a4yxq', 'template_5tdw1af', templateParams)
+            emailjs.send('service_sxbg3ts', 'template_2a5ymw7', templateParams)
                 .then(function (response) {
                     sendBtn.disabled = true
                     sendBtn.style.backgroundColor = 'green'

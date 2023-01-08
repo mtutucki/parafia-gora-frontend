@@ -128,7 +128,7 @@ body {
         position: relative;
         padding: 0;
         min-height: 100vh;
-        background-image: url('../img/header/Kosciol3.jpg');
+        background-image: url('../img/header/Kosciol3-small.jpg');
         background-position: center;
         background-size: cover;
         z-index: -2;
@@ -217,7 +217,7 @@ main {
             position: relative;
             padding: 2rem 0;
             min-height: 35vh;
-            background-image: url('../img/between/between.jpg');
+            background-image: url('../img/between/between-small.jpg');
             background-position: center;
             background-size: cover;
 
@@ -248,7 +248,7 @@ main {
         margin-top: 5rem;
 
         &__background {
-            background-image: url('../img/between/between-second.jpg');
+            background-image: url('../img/between-second/between-second-style.jpg');
         }
     }
 
@@ -499,7 +499,6 @@ main {
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    // min-height: 50vh;
     font-size: $text-fz-mb;
     background-color: $dark-text;
     text-align: center;
