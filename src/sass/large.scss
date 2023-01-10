@@ -4,14 +4,16 @@
 .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
 }
+
 .navbar {
-    .hamburger{
+    .hamburger {
         display: none;
     }
 
     .navbar-brand {
         font-size: $medium-fz-lg;
     }
+
     .nav-link {
         font-size: $text-fz-lg;
     }
@@ -24,7 +26,6 @@
 
     &__background {
         background-image: url('../img/header/Kosciol3.jpg');
-
     }
 
     &__text {
@@ -45,7 +46,6 @@
 }
 
 main {
-
     .heading {
         font-size: $medium-fz-lg;
         margin-bottom: 2rem;
@@ -97,7 +97,6 @@ main {
         .accordion-item:first-of-type .accordion-button {
             font-size: $text-fz-lg;
         }
-
     }
 
     .announce {
@@ -113,6 +112,7 @@ main {
 
     .history {
         position: relative;
+
         .heading {
             position: absolute;
             top: 0;
@@ -147,7 +147,7 @@ main {
         color: black;
         font-size: $text-fz-lg;
 
-        .container{
+        .container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -155,16 +155,16 @@ main {
             height: 100%;
         }
 
-        &__wrap{
+        &__wrap {
             margin-top: -5rem;
             padding-right: 2rem;
         }
 
-        &__wrap--last{
+        &__wrap--last {
             padding-right: 0;
         }
 
-        p{
+        p {
             padding-bottom: 1rem;
         }
 

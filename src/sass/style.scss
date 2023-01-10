@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'mixins.scss';
 
 *,
 *::before,
@@ -19,13 +20,10 @@ body {
     color: $text;
     overflow-x: hidden;
     background-color: $base-color;
-
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     position: fixed;
     top: 0vh;
     width: 100%;
@@ -34,12 +32,14 @@ body {
     background-color: #002F59;
     transition: background-color .3s;
 
-    .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+    .hamburger-inner,
+    .hamburger-inner::after,
+    .hamburger-inner::before {
         width: 35px;
         height: 1.8px;
     }
 
-    .hamburger{
+    .hamburger {
         padding: 1rem;
         padding-top: 1.5rem;
     }
@@ -51,11 +51,7 @@ body {
     }
 
     &-brand::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        @include pseudoelement-posA-b0-l0;
         height: 2px;
         background-color: $base-color;
         transform: scaleX(0);
@@ -83,30 +79,19 @@ body {
         z-index: 5;
     }
 
-    .nav-link::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: $base-color;
-        width: 100%;
+    .nav-link::before,
+    .nav-link::after {
+        @include pseudoelement-posA-b0-l0;
         height: 1px;
+        background-color: $base-color;
         transform: scaleX(0);
         transform-origin: left;
         transition: .3s;
     }
 
     .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: $base-color;
-        width: 100%;
-        height: 1px;
-        transform: scaleX(0);
+        top: 0;
         transform-origin: right;
-        transition: .3s;
     }
 
     .nav-link:hover::before,
@@ -122,33 +107,21 @@ body {
     z-index: 100;
 }
 
-.header {
 
+.header {
     &__background {
-        position: relative;
-        padding: 0;
-        min-height: 100vh;
+        @include background;
         background-image: url('../img/header/Kosciol3-small.jpg');
-        background-position: center;
-        background-size: cover;
         z-index: -2;
 
         &__shadow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0, 0, 0, .6);
+            @include background-shadow;
             z-index: -1;
         }
     }
 
     &__text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include posA-center;
         font-size: $medium-fz-mb;
 
         &__name {
@@ -214,28 +187,18 @@ main {
         overflow-x: hidden;
 
         &__background {
-            position: relative;
+            @include background;
             padding: 2rem 0;
             min-height: 35vh;
             background-image: url('../img/between/between-small.jpg');
-            background-position: center;
-            background-size: cover;
 
             &__shadow {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                background-color: rgba(0, 0, 0, .6);
+                @include background-shadow;
             }
         }
 
         &__text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            @include posA-center;
             color: $text;
             padding: 2rem 0rem;
             font-size: $text-fz-mb;
@@ -299,34 +262,22 @@ main {
         }
 
         .accordion-button:not(.collapsed) {
-            color: rgb(114, 42, 42);
+            color: $accordion-active;
         }
 
         .accordion-button:not(.collapsed)::after {
             background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23964B00'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
         }
-
-
     }
 
     .announce {
 
         &__title,
         &__date {
-            position: relative;
             text-align: center;
             font-weight: bold;
         }
 
-        &__title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 25%;
-            height: 1px;
-            width: 50%;
-            background-color: $dark-text;
-        }
 
         &__title {
             font-size: $medium-fz-mb;
@@ -379,19 +330,12 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-            // min-height: 50vh;
+            @include background;
+            min-height: auto;
             background-image: url('../img/history/KosciolDrewniany1-small.jpg');
-            background-position: center;
-            background-size: cover;
 
             &__shadow {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                background-color: rgba(0, 0, 0, .6);
+                @include background-shadow;
             }
 
             .container {
@@ -494,10 +438,8 @@ main {
 }
 
 .footer {
-    display: flex;
+    @include flex-center;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 2rem 0;
     font-size: $text-fz-mb;
     background-color: $dark-text;
@@ -511,5 +453,5 @@ main {
         cursor: pointer;
         font-style: italic;
         font-weight: normal;
-    } 
+    }
 }

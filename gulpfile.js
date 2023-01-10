@@ -17,18 +17,28 @@ const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 const clean = require('gulp-clean');
 const kit = require('gulp-kit');
+var browserify = require('gulp-browserify');
+const babelify = require('babelify');
 
 
 const paths = {
   html: './html/**/*.kit',
   sass: './src/sass/**/*.scss',
   js: './src/js/**/*.js',
+  jsMainFile: './src/js/main.js',
   img: './src/img/**/*',
   dist: './dist',
   sassDest: './dist/css',
   jsDest: './dist/js',
   imgDest: './dist/img'
 }
+
+// function javaScriptTest(done) {
+//     src('./src/js/main.js')
+//     .pipe(browserify( {debug: true}))
+//     .pipe(dest('./dist/js'))
+// };
+
 
 function sassCompiler(done) {
   src(paths.sass)
@@ -46,17 +56,11 @@ function sassCompiler(done) {
 
 function javaScript(done) {
   src(paths.js)
-  .pipe(sourcemaps.init())
-  .pipe(babel({
-    presets: ['@babel/env']
-  }))
-  .pipe(uglify())
-  .pipe(rename({
-    suffix: '.min'
-  }))
-  .pipe(sourcemaps.write())
-  .pipe(dest(paths.jsDest));
-done();
+    .pipe(babel({
+      presets: ['@babel/env'],
+    }))
+    .pipe(dest(paths.jsDest))
+  done();
 }
 
 function convertImages(done) {
@@ -74,7 +78,9 @@ function kitHandler(done) {
 }
 
 function cleanSources(done) {
-  src(paths.dist, {read: false})
+  src(paths.dist, {
+      read: false
+    })
     .pipe(clean());
   done();
 }
@@ -95,7 +101,7 @@ function watchForChanges(done) {
   done();
 }
 
-const mainFunctions = parallel(kitHandler, sassCompiler, javaScript, convertImages)
+const mainFunctions = parallel(kitHandler, sassCompiler,javaScript, convertImages)
 
 exports.cleanSources = cleanSources;
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
